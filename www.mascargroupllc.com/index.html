@@ -25,8 +25,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,600">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/css/lightbox.min.css">
     <link rel="stylesheet" href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
-    <link rel="stylesheet" href="assets/css/styles.min.css?h=2f2c26ff846219f43809dfb4de99b9eb">
+    <link rel="stylesheet" href="assets/css/styles.min.css?h=dfbc1d9317cf3e7642cd2df100402513">
 </head>
 
 <body style="font-family: Montserrat, sans-serif;background-color: #326CA1;color: rgb(255,255,255);">
@@ -86,6 +87,42 @@
     <section class="d-flex" id="services">
         <div class="d-flex flex-column" id="section-label">
             <div class="container d-xl-flex d-flex flex-column justify-content-center" id="services-container" style="height: 100vh;">
+                <div class="modal fade text-dark" role="dialog" tabindex="-1" id="LeaseModal">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Lease</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                            <div class="modal-body">
+                                <p>We are now hiring and currently looking for owners operators and drivers. Pay to the drivers is 31% gross, fuel card and more provided.<br></p>
+                            </div>
+                            <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade text-dark" role="dialog" tabindex="-1" id="DispatchModal">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Dispatch</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                            <div class="modal-body">
+                                <p>24 hours bilingual dispatch service. Dedicated routes and more.<br><br>We provide rate confirmation for each load via email.<br><br>We specialize in perishable (refrigerate) loads and dry loads.<br></p>
+                            </div>
+                            <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade text-dark" role="dialog" tabindex="-1" id="FactoringModal">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Factoring</h4><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>
+                            <div class="modal-body">
+                                <p>We look for the best rate to factor our loads, also working with the best factoring company. We can help you to do the set up.<br></p>
+                            </div>
+                            <div class="modal-footer"><button class="btn btn-light" type="button" data-dismiss="modal">Close</button></div>
+                        </div>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col">
                         <p class="text-center d-sm-flex justify-content-sm-center align-items-sm-center we-text" id="ourservices" style="/*margin-bottom: 10vh;*/">Services</p>
@@ -93,25 +130,17 @@
                 </div>
                 <div class="row" data-aos="fade-up" data-aos-delay="250" style="margin-top: 7vh;margin-bottom: 7vh;font-size: 4vh;">
                     <div class="col service-column">
-                        <p></p>
-                        <p class="service-header we-text">Lease</p>
-                        <p class="service-paragraph we-text"><br>Lorem ipsum dolor sit amet.</p>
-                    </div>
+                        <p class="service-header">Lease</p>
+                        <p class="service-paragraph">Now hiring. We are currently looking for owners operators and drivers, pay to the drivers is 31% gross. We provide fuel card and more.</p><button class="btn btn-primary" id="ModalButton" data-toggle="modal" data-target="#LeaseModal"
+                            type="button">Read More</button></div>
                     <div class="col service-column">
-                        <p></p>
-                        <p class="service-header we-text">Dispatch</p>
-                        <p class="service-paragraph we-text"><br>Lorem ipsum dolor sit amet.<br></p>
-                    </div>
+                        <p class="service-header">Dispatch</p>
+                        <p class="service-paragraph">24 hours dispatch service. We provide rate confirmation for each load via email. We specialize in perishable (refrigerate) loads and dry loads.<br>Bilingual dispatch, dedicated routes and more.</p><button class="btn btn-primary"
+                            id="ModalButton" data-toggle="modal" data-target="#DispatchModal" type="button">Read More</button></div>
                     <div class="col service-column">
-                        <p></p>
-                        <p class="service-header we-text">Factoring&nbsp;</p>
-                        <p class="service-paragraph we-text"><br>Lorem ipsum dolor sit amet.</p>
-                    </div>
-                    <div class="col service-column">
-                        <p></p>
-                        <p class="service-header we-text">Power&nbsp;</p>
-                        <p class="service-paragraph we-text"><br>Lorem ipsum dolor sit amet.<br></p>
-                    </div>
+                        <p class="service-header">Factoring&nbsp;</p>
+                        <p class="service-paragraph">We look for the best rate to factor our loads, also working with the best factoring company. We can help you to do the set up.</p><button class="btn btn-primary" id="ModalButton" data-toggle="modal" data-target="#FactoringModal"
+                            type="button">Read More</button></div>
                 </div>
             </div>
         </div>
@@ -121,9 +150,8 @@
             <div class="carousel slide height-width" data-ride="carousel" id="carousel-1" style="max-width: 100%;">
                 <div class="carousel-inner height-width" role="listbox" style="max-width:100% height-width">
                     <div class="carousel-item active height-width"><img class="w-100 d-block height-width" src="assets/img/red-truck.jpg?h=2b098540cac95b8ec692ad94d632c6bc" alt="Slide Image"></div>
-                    <div class="carousel-item height-width"><img class="w-100 d-block height-width" src="assets/img/flatbed-truck.jpg?h=79e0245fc5d5da964d254fdd0cd43091" alt="Slide Image"></div>
+                    <div class="carousel-item height-width"><img class="w-100 d-block height-width" alt="Slide Image" src="assets/img/Chris-log.jpg?h=a251f451232c4eb45784da5b890b6c85"></div>
                     <div class="carousel-item height-width"><img class="w-100 d-block height-width" src="assets/img/refrigerated-truck.jpg?h=eb2448ccc729cfc40996b58254832f95" alt="Slide Image"></div>
-                    <div class="carousel-item height-width"><img class="w-100 d-block height-width" src="assets/img/refer-truck.jpeg?h=dabfa9e220159df471df855a0be1ddab" alt="Slide Image"></div>
                 </div>
                 <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><span class="carousel-control-prev-icon"></span><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button"
                         data-slide="next"><span class="carousel-control-next-icon"></span><span class="sr-only">Next</span></a></div>
@@ -131,7 +159,6 @@
                     <li data-target="#carousel-1" data-slide-to="0" class="active"></li>
                     <li data-target="#carousel-1" data-slide-to="1"></li>
                     <li data-target="#carousel-1" data-slide-to="2"></li>
-                    <li data-target="#carousel-1" data-slide-to="3"></li>
                 </ol>
             </div>
         </div>
@@ -141,7 +168,7 @@
             <div class="row" data-aos="fade" data-aos-delay="200" style="margin-top: 5px;">
                 <div class="col-6 offset-3 offset-sm-0 offset-md-0 offset-lg-0 offset-xl-0">
                     <blockquote class="blockquote">
-                        <p class="text-center mb-0"><br>The best dispatching company in the area. I've been with them since I started my trucking bussines...<br><br></p>
+                        <p class="text-center mb-0"><br>The best dispatching company in the area. I've been with them since I started my trucking bussines.<br></p>
                         <footer class="blockquote-footer">E. Peguero (Peguero Logistics)</footer>
                     </blockquote>
                 </div>
@@ -180,7 +207,12 @@
             <div class="row">
                 <div class="col">
                     <p class="text-center" style="color:rgb(252,254,255);">CALL US :</p>
-                    <p class="d-flex justify-content-center" style="font-size:14px;color:rgb(255,255,255);">+1(786) 393-8392</p>
+                    <div class="row text-center d-xl-flex">
+                        <div class="col"><a href="tel:7863938392" style="color: #fffcfc;">+1 (786) 393-8392</a></div>
+                    </div>
+                    <div class="row text-center d-xl-flex">
+                        <div class="col"><a href="tel:2149296384" style="color: #fffcfc;">+1 (214) 929-6384</a></div>
+                    </div>
                 </div>
                 <div class="col">
                     <p class="text-center" style="color:rgb(255,255,255);">EMAIL US :</p>
