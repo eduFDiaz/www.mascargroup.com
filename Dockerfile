@@ -1,2 +1,2 @@
 FROM nginx:alpine
-COPY . /usr/share/nginx/html
+COPY ./www.mascargroupllc.com/* /usr/share/nginx/html
