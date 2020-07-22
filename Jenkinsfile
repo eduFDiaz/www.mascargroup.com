@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'mascarDockerImage'
-    }
-
-  }
+  agent none
   stages {
     stage('build docker') {
       steps {
