@@ -5,9 +5,4 @@ services:
     build: .
     ports:
      - "5013:5013"
-    deploy:
-      restart_policy:
-        condition: on-failure
-        delay: 5s
-        max_attempts: 3
-        window: 2s
+    restart: always
